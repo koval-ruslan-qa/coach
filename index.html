@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Казино игры</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
         
         body {
             font-family: Arial, sans-serif;
-            background: #f0f2f5;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,44 +23,58 @@
         .container {
             text-align: center;
             padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 90%;
         }
         
         h1 {
-            color: #333;
+            color: #c21807;
             margin-bottom: 30px;
+            font-size: 28px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .buttons {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            max-width: 300px;
-            margin: 0 auto;
         }
         
         .big-button {
             display: block;
             padding: 20px;
-            background: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .roulette-button {
+            background: linear-gradient(135deg, #d4af37, #ffd700);
+        }
+        
+        .poker-button {
+            background: linear-gradient(135deg, #2e8b57, #32cd32);
         }
         
         .big-button:hover {
-            background: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Добро пожаловать!</h1>
+        <h1>🎰 Казино Игры</h1>
         <div class="buttons">
-            <a href="page-group-1/index.html" class="big-button">Функционал №1</a>
-            <a href="page-group-2/index.html" class="big-button">Функционал №2</a>
+            <a href="roulette/index.html" class="big-button roulette-button">🎡 Рулетка</a>
+            <a href="poker/index.html" class="big-button poker-button">♠️ Покер</a>
         </div>
     </div>
 </body>
