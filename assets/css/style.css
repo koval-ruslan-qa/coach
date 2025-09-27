@@ -1,0 +1,235 @@
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== */
+.main-page {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+.main-title {
+    color: #c21807;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.big-button {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.roulette-button {
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+}
+
+.poker-button {
+    background: linear-gradient(135deg, #2e8b57, #32cd32);
+}
+
+.big-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦ РАЗДЕЛОВ (Рулетка/Покер) ===== */
+.section-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.roulette-page {
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+}
+
+.poker-page {
+    background: linear-gradient(135deg, #2e8b57, #32cd32);
+}
+
+.section-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.roulette-back {
+    background: #8b4513;
+}
+
+.poker-back {
+    background: #006400;
+}
+
+.back-button:hover {
+    opacity: 0.9;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.roulette-title {
+    color: #8b0000;
+}
+
+.poker-title {
+    color: #006400;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.grid-button {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s, background 0.3s;
+    border: 2px solid;
+}
+
+.roulette-grid-button {
+    color: #8b0000;
+    border-color: #8b0000;
+}
+
+.poker-grid-button {
+    color: #006400;
+    border-color: #006400;
+}
+
+.grid-button:hover {
+    transform: translateY(-2px);
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== СТИЛИ ДЛЯ КОНТЕНТНЫХ СТРАНИЦ ===== */
+.content-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.content-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.content-body p {
+    margin-bottom: 15px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .main-container {
+        padding: 20px;
+    }
+    
+    .big-button {
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-button {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .big-button {
+        font-size: 16px;
+    }
+}
