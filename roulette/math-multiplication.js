@@ -26,20 +26,15 @@ function initMultiplicationPage() {
 
 // Генерация нового примера
 function generateNewExample() {
-    // Случайный выбор a из массива
     currentA = aValues[Math.floor(Math.random() * aValues.length)];
-    
-    // Случайный выбор b от 2 до 20
     currentB = Math.floor(Math.random() * 19) + 2;
     
-    // Обновляем отображение примера
     exampleElement.textContent = `${currentA} × ${currentB}`;
-    
-    // Обновляем ответ и мгновенно скрываем
     answerElement.textContent = currentA * currentB;
-    answerElement.classList.add('hidden');
     
-    // Обновляем текст кнопки
+    // Скрываем ответ но сохраняем место
+    answerElement.style.visibility = 'hidden';
+    
     actionButton.textContent = 'Покажи ответ';
     isAnswerShown = false;
 }
@@ -48,11 +43,11 @@ function generateNewExample() {
 function handleButtonClick() {
     if (!isAnswerShown) {
         // Показываем ответ
-        answerElement.classList.remove('hidden');
+        answerElement.style.visibility = 'visible';
         actionButton.textContent = 'Следующий пример';
         isAnswerShown = true;
     } else {
-        // Генерируем новый пример (ответ скроется мгновенно)
+        // Генерируем новый пример
         generateNewExample();
     }
 }
