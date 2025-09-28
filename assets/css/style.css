@@ -129,7 +129,8 @@ body {
 }
 
 .poker-title {
-    color: #006400;
+    color: #ffffff;  /* Белый цвет */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Добавляем тень для лучшей читаемости */
 }
 
 .button-grid {
