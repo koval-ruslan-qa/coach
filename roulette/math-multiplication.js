@@ -26,27 +26,22 @@ function initMultiplicationPage() {
 
 // Генерация нового примера
 function generateNewExample() {
-    // Мгновенно скрываем ответ без анимации
+    // Случайный выбор a из массива
+    currentA = aValues[Math.floor(Math.random() * aValues.length)];
+    
+    // Случайный выбор b от 2 до 20
+    currentB = Math.floor(Math.random() * 19) + 2;
+    
+    // Обновляем отображение примера
+    exampleElement.textContent = `${currentA} × ${currentB}`;
+    
+    // Обновляем ответ и мгновенно скрываем
+    answerElement.textContent = currentA * currentB;
     answerElement.classList.add('hidden');
     
-    // Ждем один кадр анимации
-    requestAnimationFrame(() => {
-        // Случайный выбор a из массива
-        currentA = aValues[Math.floor(Math.random() * aValues.length)];
-        
-        // Случайный выбор b от 2 до 20
-        currentB = Math.floor(Math.random() * 19) + 2;
-        
-        // Обновляем отображение примера
-        exampleElement.textContent = `${currentA} × ${currentB}`;
-        
-        // Обновляем ответ
-        answerElement.textContent = currentA * currentB;
-        
-        // Обновляем текст кнопки
-        actionButton.textContent = 'Покажи ответ';
-        isAnswerShown = false;
-    });
+    // Обновляем текст кнопки
+    actionButton.textContent = 'Покажи ответ';
+    isAnswerShown = false;
 }
 
 // Обработчик клика по кнопке
@@ -57,7 +52,7 @@ function handleButtonClick() {
         actionButton.textContent = 'Следующий пример';
         isAnswerShown = true;
     } else {
-        // Генерируем новый пример
+        // Генерируем новый пример (ответ скроется мгновенно)
         generateNewExample();
     }
 }
