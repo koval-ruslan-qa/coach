@@ -111,3 +111,24 @@ const commonModules = {
         }
     }
 };
+// ===== МОДУЛЬ ТАБЛИЦЫ УМНОЖЕНИЯ =====
+const multiplicationModule = {
+    init: function() {
+        console.log('Модуль таблицы умножения инициализирован');
+    },
+    
+    // Массив фиксированных значений
+    aValues: [35, 17, 8, 11, 5, 25],
+    
+    // Генерация случайного числа от min до max
+    getRandomInt: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    
+    // Генерация примера
+    generateExample: function() {
+        const a = this.aValues[Math.floor(Math.random() * this.aValues.length)];
+        const b = this.getRandomInt(2, 20);
+        return { a, b, answer: a * b };
+    }
+};
