@@ -331,12 +331,15 @@ body {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
     margin-top: 20px;
 }
 
 .action-button:hover {
     background: #a52a2a;
+    transform: translateY(-2px);
 }
+
 .action-button:active {
     transform: translateY(0);
 }
