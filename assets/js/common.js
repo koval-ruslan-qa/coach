@@ -132,3 +132,23 @@ const multiplicationModule = {
         return { a, b, answer: a * b };
     }
 };
+
+// ===== МОДУЛЬ ПРИМЕРОВ =====
+const examplesModule = {
+    init: function() {
+        console.log('Модуль примеров инициализирован');
+    },
+    
+    // Массив фиксированных значений
+    aValues: [35, 25, 17, 11, 8, 5],
+    
+    // Генерация случайного числа от min до max
+    getRandomInt: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    
+    // Перемешивание массива
+    shuffleArray: function(array) {
+        return [...array].sort(() => Math.random() - 0.5);
+    }
+};
