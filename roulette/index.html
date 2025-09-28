@@ -4,94 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рулетка - Разделы</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #d4af37, #ffd700);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .back-button {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #8b4513;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        
-        .back-button:hover {
-            background: #a0522d;
-        }
-        
-        h1 {
-            color: #8b0000;
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 32px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        
-        .grid-button {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #8b0000;
-            text-decoration: none;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 16px;
-            border: 2px solid #8b0000;
-            transition: transform 0.3s, background 0.3s;
-        }
-        
-        .grid-button:hover {
-            transform: translateY(-2px);
-            background: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 600px) {
-            .button-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="section-page roulette-page">
     <div class="container">
-        <a href="../index.html" class="back-button">← Назад в главное меню</a>
-        <h1>🎡 Рулетка</h1>
-        
-        <div class="button-grid">
-            <a href="math.html" class="grid-button">🧮 Математика</a>
-            <a href="sectors.html" class="grid-button">🎯 Сектора</a>
-            <a href="completes.html" class="grid-button">🔢 Комплиты</a>
-            <a href="completes-intersection.html" class="grid-button">⚡ Пересечения комплитов</a>
-            <a href="bets.html" class="grid-button">💰 Ставки</a>
-            <a href="cash-payouts.html" class="grid-button">💸 Выплаты через Cash</a>
+        <div class="section-container">
+            <a href="../index.html" class="back-button roulette-back">← Назад в главное меню</a>
+            <h1 class="section-title roulette-title">🎡 Рулетка</h1>
+            
+            <div class="button-grid">
+                <a href="math.html" class="grid-button roulette-grid-button">🧮 Математика</a>
+                <a href="sectors.html" class="grid-button roulette-grid-button">🎯 Сектора</a>
+                <a href="completes.html" class="grid-button roulette-grid-button">🔢 Комплиты</a>
+                <a href="completes-intersection.html" class="grid-button roulette-grid-button">⚡ Пересечения комплитов</a>
+                <a href="bets.html" class="grid-button roulette-grid-button">💰 Ставки</a>
+                <a href="cash-payouts.html" class="grid-button roulette-grid-button">💸 Выплаты через Cash</a>
+            </div>
         </div>
     </div>
+    <script src="../assets/js/common.js"></script>
 </body>
 </html>
