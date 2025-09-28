@@ -311,11 +311,10 @@ body {
     margin: 20px 0;
     color: #2e8b57;
     min-height: 50px;
-    transition: opacity 0.3s ease;
 }
 
 .answer.hidden {
-    opacity: 0;
+    display: none;
 }
 
 .action-button {
@@ -327,15 +326,12 @@ body {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
     margin-top: 20px;
 }
 
 .action-button:hover {
     background: #a52a2a;
-    transform: translateY(-2px);
 }
-
 .action-button:active {
     transform: translateY(0);
 }
