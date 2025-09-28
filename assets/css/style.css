@@ -310,12 +310,17 @@ body {
     font-size: 36px;
     margin: 20px 0;
     color: #2e8b57;
-    min-height: 50px;
+    height: 50px; /* Фиксированная высота */
+    line-height: 50px; /* Вертикальное выравнивание */
+    visibility: hidden; /* Скрываем но сохраняем место */
+}
+
+.answer:not(.hidden) {
+    visibility: visible; /* Показываем */
 }
 
 .answer.hidden {
-    display: none;
-}
+    /* Ничего не нужно - скрыто через visibility */
 
 .action-button {
     padding: 15px 30px;
