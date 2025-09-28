@@ -3,7 +3,7 @@ const aValues = [35, 25, 17, 11, 8, 5];
 
 // Переменные для текущего примера
 let currentValues = [];
-let currentB = 0;
+let currentBValues = [];
 let isAnswerShown = false;
 
 // Элементы DOM
@@ -24,23 +24,34 @@ function initExamplesPage() {
     actionButton.addEventListener('click', handleButtonClick);
 }
 
+// Генерация уникальных случайных чисел от min до max
+function generateUniqueRandomNumbers(count, min, max) {
+    const numbers = new Set();
+    while (numbers.size < count) {
+        numbers.add(Math.floor(Math.random() * (max - min + 1)) + min);
+    }
+    return Array.from(numbers);
+}
+
 // Генерация нового примера
 function generateNewExample() {
     // Создаем копию массива и перемешиваем
     let shuffledA = [...aValues].sort(() => Math.random() - 0.5);
     
-    // Берем первые 3 уникальных значения
+    // Берем первые 3 уникальных значения для a
     currentValues = shuffledA.slice(0, 3);
     
-    // Случайный выбор b от 2 до 20
-    currentB = Math.floor(Math.random() * 19) + 2;
+    // Генерируем 3 уникальных значения для b от 2 до 20
+    currentBValues = generateUniqueRandomNumbers(3, 2, 20);
     
     // Формируем пример
-    const exampleText = `(${currentValues[0]} × ${currentB}) + (${currentValues[1]} × ${currentB}) + (${currentValues[2]} × ${currentB})`;
+    const exampleText = `(${currentValues[0]} × ${currentBValues[0]}) + (${currentValues[1]} × ${currentBValues[1]}) + (${currentValues[2]} × ${currentBValues[2]})`;
     exampleElement.textContent = exampleText;
     
     // Вычисляем ответ
-    const answer = (currentValues[0] * currentB) + (currentValues[1] * currentB) + (currentValues[2] * currentB);
+    const answer = (currentValues[0] * currentBValues[0]) + 
+                   (currentValues[1] * currentBValues[1]) + 
+                   (currentValues[2] * currentBValues[2]);
     answerElement.textContent = `Ответ: ${answer}`;
     
     // Скрываем ответ
